@@ -1,31 +1,89 @@
 :root{
 
-    --bg-colour: #242424;
+    --bg-colour: #111111;
     --primary-colour: #153466;
-    --secondary-colour: white;
+    --secondary-colour: #201e22;
+    --text-colour: white;
 
 
 }
 
 
 html{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
 }
 
 body{
     background-color: var(--bg-colour);
-    color: var(--secondary-colour);
+    color: var(--text-colour);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+#check:checked{
+    fill: black;
+}
 .wrapper{
+    width: 700px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
 
-    background-color: #1f1f1f;
+#list{
+    padding-left: 0;
+}
+
+#todo-input{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--bg-colour);
+    font: inherit;
+    color: inherit;
+    border: 5px solid var(--primary-colour);
+    border-radius: 1000px;
 
 }
+#todo-input:focus{
+    outline: none;
+}
+#add-button{
+    padding: 15px;
+    background-color: var(--primary-colour);
+    font: inherit;
+    color: inherit;
+    border: 3px solid var(--primary-colour);
+    border-radius: 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+.todo-item{
+    margin-top: 10px;
+    padding: 10px;
+    border: 5px solid var(--primary-colour);
+    border-radius: 10000px;
+    background-color: var(--bg-colour);
+    list-style: none;
+}
+
+.trash{
+    position: absolute;
+    right: 3%;
+}
+.trash:hover{
+    transition: ease 100ms;
+    fill: #c22b2b;
+}
+
 h1{
+    margin-top: 10vh;
     color: var(--primary-colour);
     font-weight: 800;
-    font-size: 60pt;
+    font-size: 80pt;
 }
