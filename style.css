@@ -2,7 +2,7 @@
 
     --bg-colour: #111111;
     --primary-colour: #153466;
-    --secondary-colour: #201e22;
+    --secondary-colour: #737175;
     --text-colour: white;
 
 
@@ -11,6 +11,7 @@
 
 html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pt;
     padding: 10px;
 }
 
@@ -45,7 +46,6 @@ body{
     color: inherit;
     border: 5px solid var(--primary-colour);
     border-radius: 1000px;
-
 }
 #todo-input:focus{
     outline: none;
@@ -60,21 +60,59 @@ body{
     position: absolute;
     right: 0;
     top: 0;
+    cursor: pointer;
 
 }
 
+
+.custom-checkbox{
+    display: flex;
+    border: var(--primary-colour) solid 3px;
+    border-radius: 1000000000px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox{
+    transition: ease 100ms;
+    background-color: var(--primary-colour);
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox svg{
+    transition: ease 100ms;
+    fill: var(--text-colour);
+}
+input[type="checkbox"]:checked ~ .todo-text{
+    transition: ease 100ms;
+    color: var(--secondary-colour);
+    text-decoration: line-through;
+}
+
+.todo-text{
+    transition: ease 100ms;
+    cursor: pointer;
+}
+
 .todo-item{
+    font: inherit;
     margin-top: 10px;
     padding: 10px;
     border: 5px solid var(--primary-colour);
     border-radius: 10000px;
     background-color: var(--bg-colour);
     list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .trash{
     position: absolute;
     right: 3%;
+    cursor: pointer;
 }
 .trash:hover{
     transition: ease 100ms;
