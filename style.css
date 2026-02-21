@@ -4,10 +4,7 @@
     --primary-colour: #153466;
     --secondary-colour: #737175;
     --text-colour: white;
-
-
 }
-
 
 html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -113,10 +110,16 @@ input[type="checkbox"]:checked ~ .todo-text{
     position: absolute;
     right: 3%;
     cursor: pointer;
+    background: none;
+    border: none;
 }
-.trash:hover{
+.trash svg:hover{
     transition: ease 100ms;
     fill: #c22b2b;
+}
+
+.trash svg{
+    transition: ease 100ms;
 }
 
 h1{
