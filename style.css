@@ -1,0 +1,31 @@
+:root{
+
+    --bg-colour: #242424;
+    --primary-colour: #153466;
+    --secondary-colour: white;
+
+
+}
+
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body{
+    background-color: var(--bg-colour);
+    color: var(--secondary-colour);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper{
+
+    background-color: #1f1f1f;
+
+}
+h1{
+    color: var(--primary-colour);
+    font-weight: 800;
+    font-size: 60pt;
+}
